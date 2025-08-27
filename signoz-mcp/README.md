@@ -25,8 +25,6 @@ export SIGNOZ_SSL_VERIFY=true
 ```
 
 ### Installation
-
-1. Install dependencies:
 Using uv:
 ```bash
 uv sync
