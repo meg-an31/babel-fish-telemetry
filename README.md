@@ -37,10 +37,8 @@ signoz: uv run python main.py —-cwd /path/to/signoz-mcp - ✓ Connected
 axiom: /path/to/axiom-mcp  - ✓ Connected
 ```
 
-By default, these MCP tools will be only available to the local instance of claudecode. To access them globally, use the following:
-```bash
-claude mcp add --global <server-name> <server-config>
-```
+By default, these MCP tools will be only available to the local instance of claudecode. Please see Anthropic's [guide](https://docs.anthropic.com/en/docs/claude-code/mcp#mcp-installation-scopes) for using configuring the scope of the MCP server.
+
 
 ### 4. done! talk to claude!
 
