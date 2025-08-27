@@ -1,6 +1,6 @@
 # Signoz MCP Server
 
-A Model Context Protocol (MCP) server that provides tools for interacting with Signoz observability platform. This server exposes various tools for dashboard management, APM metrics, service discovery, and custom queries.
+MCP server fo communicating with the signoz traces created by slarti!
 
 ## Setup
 
@@ -9,19 +9,25 @@ A Model Context Protocol (MCP) server that provides tools for interacting with S
 Set the following environment variables:
 
 ```bash
-export SIGNOZ_HOST="https://your-signoz-instance.com"
-export SIGNOZ_API_KEY="your-api-key"  
-export SIGNOZ_SSL_VERIFY="true"       # Optional, defaults to true
+# HOST URL
+# This is the root url when you are logged in and accessing your signoz settings. 
+# More specifically, it can be _changed_ by going to the following page: https://SIGNOZ_HOST/settings/custom-domain-settings
+export SIGNOZ_HOST=https://your.server.here
+
+# API KEY
+# Get from SIGNOZ_HOST/settings/api-keys
+# Ensure it has permissions to read streams
+export SIGNOZ_API_KEY=your-api-key-here
+
+# SSL VERIFY
+# Enable/disable SSL verification (default: true)
+export SIGNOZ_SSL_VERIFY=true
 ```
 
 ### Installation
 
 1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-Or using uv:
+Using uv:
 ```bash
 uv sync
 ```
@@ -105,11 +111,3 @@ This server is almost a wrapper around the original implementation, using the si
   }
 }
 ```
-
-## Configuration
-
-The server reads configuration from environment variables:
-
-- `SIGNOZ_HOST`: Your Signoz instance URL (required)
-- `SIGNOZ_API_KEY`: API key for authentication (optional)
-- `SIGNOZ_SSL_VERIFY`: Enable/disable SSL verification (default: true)
