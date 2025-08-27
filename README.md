@@ -43,3 +43,11 @@ By default, these MCP tools will be only available to the local instance of clau
 ### 4. done! talk to claude!
 
 claudecode should now be able to give precise insights into where things are going wrong along the development process.
+
+## system prompts
+
+I found it really helpful to remind claude of the right way of querying databases. for example, running with the system prompt: 
+```
+claude --append-system-prompt "1. Always include hostname and pid fields in Axiom queries; 2. Search the full msg field content which contains much more detailed information than I was accessing; 3. Look for successful message content in addition to errors to understand what was supposed to happen.
+```
+(which claude came up with itself) really improved the quality of responses. 
