@@ -41,3 +41,7 @@ By default, these MCP tools will be only available to the local instance of clau
 ```bash
 claude mcp add --global <server-name> <server-config>
 ```
+
+### 4. done! talk to claude!
+
+claudecode should now be able to give precise insights into where things are going wrong along the development process.
