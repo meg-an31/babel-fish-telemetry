@@ -16,7 +16,7 @@ Set up the Axiom database as described [here](https://github.com/axiomhq/mcp-ser
 
 From inside the directory you want to run claudecode, run the following: 
 
-```zsh
+```bash
 # Signoz MCP connection
 # replace <your-url>, <your-api-key>, and /path/to with their relevant values
 claude mcp add signoz uv run python main.py —-cwd /path/to/signoz-mcp --env SIGNOZ_HOST=<your-url> --env SIGNOZ_API_KEY=<your-api-key> --env SIGNOZ_SSL_VERIFY=true
@@ -37,4 +37,7 @@ signoz: uv run python main.py —-cwd /path/to/signoz-mcp - ✓ Connected
 axiom: /path/to/axiom-mcp  - ✓ Connected
 ```
 
-By default, these MCP tools will be only available to the local instance of claudecode. To access them globally, use the flag `--i need to check this actually`. 
+By default, these MCP tools will be only available to the local instance of claudecode. To access them globally, use the following:
+```bash
+claude mcp add --global <server-name> <server-config>
+```
